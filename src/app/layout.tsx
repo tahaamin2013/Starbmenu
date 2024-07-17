@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import siteMetadata from "../utils/siteMetaData";
 import { cx } from "../utils";
+
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: siteMetadata.title,
@@ -37,9 +40,7 @@ export default function RootLayout({
       <head>
         <meta name="theme-color" content="#0b7555" />
       </head>
-      <body className={cx("font-EuclidCircularB", "font-mr", "font-Baloo2")}>
-        {children}
-      </body>
+      <body className={cx("font-EuclidCircularB", "font-mr")}>{children}</body>
     </html>
   );
 }
