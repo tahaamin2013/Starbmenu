@@ -57,12 +57,12 @@ const MobileHerosection = () => {
   return (
     <>
       {loading ? (
-        <div className="flex justify-between pb-3 items-center px-7 border-b mb-3 flex-col md:flex-row">
-          <Skeleton className="h-[340px] mb-2 md:mt-2 w-full rounded-xl" />
+        <div className=" pb-3 items-center px-7 border-b mb-3 block md:hidden">
+          <Skeleton className="mb-2 h-[400px] md:mt-2 w-full rounded-xl" />
         </div>
       ) : (
-        <Carousel className="max-w-full mb-6 lg:hidden block overflow-hidden">
-          <div className="w-[300px] absolute -left-[13rem] -bottom-0 h-[300px] bg-orange-300 rounded-full blur-3xl" />
+        <Carousel className="max-w-full h-[400px] mb-6 lg:hidden block overflow-hidden">
+          <div className="w-[300px] absolute -left-[13rem] -bottom-0 h-[200px] bg-orange-300 rounded-full blur-3xl" />
           <div className="w-[400px] absolute -right-[13rem] top-[10px] h-[307px] bg-[#C0E8A6] rounded-full blur-2xl" />
 
           <CarouselContent>
@@ -83,12 +83,12 @@ const MobileHerosection = () => {
                     height={400}
                   />
                   <div className="flex flex-col gap-3 justify-between w-full items-center px-10">
-                    <span className="font-bold text-2xl mt-1">
+                    <span className="font-bold text-xl mt-1">
                       {product.name}
                     </span>
                     <Link
                       href={`/articles/${link}`}
-                      className="w-full text-white rounded-full bg-primary py-3 text-lg duration-500 transition-all"
+                      className="w-fit px-6 text-white rounded-full bg-primary py-2 text-[15px] duration-500 transition-all"
                     >
                       View Price & Calories
                     </Link>
