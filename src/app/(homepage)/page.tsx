@@ -145,12 +145,12 @@ const MenuPage = () => {
               className="pr-10 outline-none"
             />
             {searchQuery.length > 0 ? (
-              <button
+              <div
                 onClick={clearSearch}
                 className="absolute right-3 top-1/2 transform -translate-y-1/2 outline-none focus:outline-none text-gray-500 hover:text-gray-700"
               >
                 <X size={26} />
-              </button>
+              </div>
             ) : (
               <Search
                 size={21}

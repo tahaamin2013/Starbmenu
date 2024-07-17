@@ -10,8 +10,6 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-// prisma/schema.prisma
-// prisma/contact.ts
 model Contact {
   id      String      @id @default(cuid()) @map("_id")
   name    String

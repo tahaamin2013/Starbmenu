@@ -6,7 +6,7 @@ const siteMetadata = {
   language: "en-us",
   theme: "light", // system, dark or light
   siteUrl: "https://starbmenu.com/", // your website URL
-  siteLogo: "/icon.ico",
+  siteLogo: "/logo.ico",
   // socialBanner: "/socialBanner.webp", // add social banner in the public folder
   locale: "en-US",
 };

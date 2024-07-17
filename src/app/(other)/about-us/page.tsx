@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Link from "next/link";
 import React from "react";
 
 export const metadata: Metadata = {
@@ -6,9 +7,9 @@ export const metadata: Metadata = {
   description:
     "Learn more about our mission, vision, and the team behind the Starbucks Menu website.",
   icons: {
-    icon: ["/icon.ico?v=4"],
-    apple: ["/icon.io?v=4"],
-    shortcut: ["/icon.io"],
+    icon: ["/logo.ico?v=4"],
+    apple: ["/logo.io?v=4"],
+    shortcut: ["/logo.io"],
   },
 };
 
@@ -52,9 +53,9 @@ const AboutUs = () => {
         Thank you for visiting our site. We hope you find our content helpful
         and informative. If you have any suggestions or feedback, please feel
         free to{" "}
-        <a href="/contact" className="text-blue-500 hover:underline">
+        <Link href="/contact" className="text-blue-500 hover:underline">
           contact us
-        </a>
+        </Link>
         .
       </p>
     </div>
