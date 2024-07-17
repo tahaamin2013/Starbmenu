@@ -1,8 +1,10 @@
 @tailwind base;
   @tailwind components;
   @tailwind utilities;
-body {
-  font-family: "EuclidCircularB", sans-serif;
+    @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600&display=swap');
+.body {
+  font-family: 'Baloo 2', sans-serif;
+  /* Optionally, define other styles like font-weight, etc. */
 }
 .glowing-effect {
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
