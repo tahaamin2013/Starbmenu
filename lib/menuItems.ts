@@ -4270,7 +4270,7 @@ export const Menu: Category[] = [
       {
         name: "Snacks & Sweets",
         image: "/Snacks & Sweets.avif",
-        link: "snack-and-sweets",
+        link: "snacks-and-sweets",
         subItems: [
           {
             category: "Biscotti & Cookies",

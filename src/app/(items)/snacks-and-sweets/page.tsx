@@ -3,7 +3,7 @@ import React from "react";
 
 const SnackAndSweet = () => {
   return (
-    <CategoryPageComponent name="Snacks & Sweets" link="/snack-and-sweets" />
+    <CategoryPageComponent name="Snacks & Sweets" link="/snacks-and-sweets" />
   );
 };
 
