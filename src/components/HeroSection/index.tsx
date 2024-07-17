@@ -25,6 +25,7 @@ const HeroSection = () => {
   const [selectedProduct, setSelectedProduct] = useState(
     Menu[0].items[0].subItems[0].products[0]
   );
+  const [selectedCategory, setSelectedCategory] = useState(Menu[0].items[0]);
   const [canScrollPrev, setCanScrollPrev] = useState(false);
   const [canScrollNext, setCanScrollNext] = useState(true);
 
@@ -52,6 +53,18 @@ const HeroSection = () => {
     (product: any, index: number) => {
       setSelectedProduct(product);
       setCurrentIndex(index);
+
+      // Update the selected category
+      Menu.forEach((category) => {
+        category.items.forEach((item) => {
+          item.subItems.forEach((subItem) => {
+            if (subItem.products.includes(product)) {
+              setSelectedCategory(item);
+            }
+          });
+        });
+      });
+
       scrollTo(index);
     },
     [scrollTo]
@@ -97,6 +110,7 @@ const HeroSection = () => {
   }
 
   const link = convertNameToLink(selectedProduct.name);
+  const categorylink = convertNameToLink(selectedCategory.name);
 
   return (
     <section className="w-full">
@@ -151,7 +165,7 @@ const HeroSection = () => {
         <div className="flex relative overflow-hidden bg-white  w-full  justify-between pl-[94px] py-[40px]">
           <div className="text-center z-50 flex flex-col items-center justify-center gap-3">
             <div className="ml-0 md:mt-0 mt-5 md:ml-6">
-              <Link href={`/articles/${link}`}>
+              <Link href={`${categorylink}/${link}`}>
                 <Image
                   className="rounded-full max-w-[200px] md:max-w-[280px] shadow-glow shadow-primary"
                   src={selectedProduct.image}
@@ -163,13 +177,13 @@ const HeroSection = () => {
               </Link>
             </div>
             <div className="mt-2 flex w-full items-center justify-center flex-col">
-              <Link href={`/articles/${link}`}>
+              <Link href={`${categorylink}/${link}`}>
                 <span className="font-bold max-w-xs mb-3 text-xl lg:text-2xl line-clamp-2 h-[60px]">
                   {selectedProduct.name}
                 </span>
               </Link>
               <div className="flex flex-col gap-2">
-                <Link href={`/articles/${link}`}>
+                <Link href={`${categorylink}/${link}`}>
                   <Button className="text-white rounded-full duration-500 transition-all text-sm lg:text-base">
                     View Price & Calories
                   </Button>
