@@ -72,7 +72,7 @@ const MobileHerosection = () => {
               return (
                 <CarouselItem
                   key={product.link}
-                  className="pt-1 items-center flex gap-2 flex-col justify-center text-center"
+                  className="pt-1 flex flex-col gap-3  w-full items-center px-10 justify-center text-center"
                 >
                   <Image
                     className="rounded-full w-[12rem]"
@@ -82,17 +82,13 @@ const MobileHerosection = () => {
                     width={400}
                     height={400}
                   />
-                  <div className="flex flex-col gap-3 justify-between w-full items-center px-10">
-                    <span className="font-bold text-xl mt-1">
-                      {product.name}
-                    </span>
-                    <Link
-                      href={`/articles/${link}`}
-                      className="w-fit px-6 text-white rounded-full bg-primary py-2 text-[15px] duration-500 transition-all"
-                    >
-                      View Price & Calories
-                    </Link>
-                  </div>
+                  <span className="font-bold text-xl mt-1">{product.name}</span>
+                  <Link
+                    href={`/articles/${link}`}
+                    className="w-fit px-6 text-white rounded-full bg-primary py-2 text-[15px] duration-500 transition-all"
+                  >
+                    View Price & Calories
+                  </Link>
                 </CarouselItem>
               );
             })}
