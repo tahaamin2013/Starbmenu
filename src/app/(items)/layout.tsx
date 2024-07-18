@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title: siteMetadata.title,
   description: siteMetadata.description,
   icons: {
-    icon: ["/logo.ico?v=4"],
+    icon: ["/favicon.ico?v=4"],
     apple: ["/logo.io?v=4"],
     shortcut: ["logo.io"],
   },

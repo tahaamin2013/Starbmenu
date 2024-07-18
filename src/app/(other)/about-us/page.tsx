@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "Learn more about our mission, vision, and the team behind the Starbucks Menu website.",
   icons: {
-    icon: ["/logo.ico?v=4"],
+    icon: ["/favicon.ico?v=4"],
     apple: ["/logo.io?v=4"],
     shortcut: ["/logo.io"],
   },
