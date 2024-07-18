@@ -170,7 +170,7 @@ const CategoryPageComponent: React.FC<{ name: string; link: string }> = ({
                   <Slash />
                 </BreadcrumbSeparator>
                 <BreadcrumbItem>
-                  <BreadcrumbLink href={`/${link}`}>{name}</BreadcrumbLink>
+                  <BreadcrumbLink href={`${link}`}>{name}</BreadcrumbLink>
                 </BreadcrumbItem>
               </BreadcrumbList>
             </Breadcrumb>
