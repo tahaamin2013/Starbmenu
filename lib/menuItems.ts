@@ -29,7 +29,7 @@ export const Menu: Category[] = [
     category: "Drinks",
     items: [
       {
-        name: "  ",
+        name: "Hot Coffees",
         image: "/hot cofee.avif",
         link: "hot-coffees",
         subItems: [
@@ -2664,7 +2664,7 @@ export const Menu: Category[] = [
                   },
                   {
                     size: "Grande",
-                    price: "$5.95",
+                    price: "$5.45",
                     calories: 240,
                     size2: "16 fl oz",
                   },
