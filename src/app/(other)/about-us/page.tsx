@@ -53,7 +53,7 @@ const AboutUs = () => {
         Thank you for visiting our site. We hope you find our content helpful
         and informative. If you have any suggestions or feedback, please feel
         free to{" "}
-        <Link href="/contact" className="text-blue-500 hover:underline">
+        <Link href="/contact-us" className="text-blue-500 hover:underline">
           contact us
         </Link>
         .
