@@ -5,7 +5,7 @@ const OatmealAndYougurt = () => {
   return (
     <CategoryPageComponent
       name="Oatmeal & Yogurt"
-      link="/owatmeal-and-yougurt"
+      link="/oatmeal-and-yougurt"
     />
   );
 };

@@ -38,6 +38,7 @@ function shuffleArray(array: any[]) {
 const MobileHerosection = () => {
   const [loading, setLoading] = useState<boolean>(true);
   const [allProducts, setAllProducts] = useState<any[]>([]);
+  const [selectedCategory, setSelectedCategory] = useState(Menu[0].items[0]);
 
   useEffect(() => {
     const fetchProducts = () => {
@@ -53,6 +54,7 @@ const MobileHerosection = () => {
 
     fetchProducts();
   }, []); // Empty dependency array means this will only run once when the component mounts
+  const categorylink = convertNameToLink(selectedCategory.name);
 
   return (
     <>
@@ -84,7 +86,7 @@ const MobileHerosection = () => {
                   />
                   <span className="font-bold text-xl mt-1">{product.name}</span>
                   <Link
-                    href={`/articles/${link}`}
+                    href={`${categorylink}/${link}`}
                     className="w-fit px-6 text-white rounded-full bg-primary py-2 text-[15px] duration-500 transition-all"
                   >
                     View Price & Calories

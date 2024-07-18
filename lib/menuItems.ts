@@ -3966,7 +3966,7 @@ export const Menu: Category[] = [
       {
         name: "Oatmeal & Yogurt",
         image: "/Oatmeal & Yogurt.avif",
-        link: "owatmeal-and-yougurt",
+        link: "oatmeal-and-yougurt",
         subItems: [
           {
             category: "Oatmeal & Yogurt",
