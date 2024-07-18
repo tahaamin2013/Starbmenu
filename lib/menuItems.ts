@@ -29,7 +29,7 @@ export const Menu: Category[] = [
     category: "Drinks",
     items: [
       {
-        name: "Hot Coffees",
+        name: "  ",
         image: "/hot cofee.avif",
         link: "hot-coffees",
         subItems: [

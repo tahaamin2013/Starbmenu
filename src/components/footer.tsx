@@ -106,16 +106,16 @@ const Footer = () => {
                 <li className="mb-4">
                   <Link
                     href="/hot-coffees"
-                    aria-label="Starbucks Hot Coffees"
+                    aria-label="Starbucks   "
                     className="text-gray-600 hover:text-gray-900"
                   >
-                    Hot Coffees
+                      
                   </Link>
                 </li>
                 <li className="mb-4">
                   <Link
                     href="/cold-coffees"
-                    aria-label="Starbucks Hot Coffees"
+                    aria-label="Starbucks   "
                     className="text-gray-600 hover:text-gray-900"
                   >
                     Cold Coffees
