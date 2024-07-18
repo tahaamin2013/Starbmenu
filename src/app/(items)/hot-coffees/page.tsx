@@ -2,7 +2,7 @@ import CategoryPageComponent from "@/src/components/Category/CategoryPageCompone
 import React from "react";
 
 const HotCoffees = () => {
-  return <CategoryPageComponent name="Hot Coffees" link="/hot-coffee" />;
+  return <CategoryPageComponent name="Hot Coffees" link="/hot-coffees" />;
 };
 
 export default HotCoffees;
