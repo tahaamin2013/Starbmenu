@@ -12,6 +12,10 @@ export const metadata: Metadata = {
     template: `%s - ${siteMetadata.title}`,
   },
   description: siteMetadata.description,
+  openGraph: {
+    title: siteMetadata.title,
+    description: siteMetadata.description,    
+  },
   twitter: {
     card:'summary_large_image',
   },
@@ -30,8 +34,9 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta name="theme-color" content="#0b7555" />
+        <meta property="og:image" content="https://starbmenu.com/opengraph-image.png" />
       </head>
-      <body className={cx("font-EuclidCircularB", "font-mr")}>{children}</body>
+      <body className={cx("font-mr")}>{children}</body>
     </html>
   );
 }
