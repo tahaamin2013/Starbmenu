@@ -7,25 +7,17 @@ import { cx } from "../utils";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: siteMetadata.title,
+  title: {
+    default: siteMetadata.title,
+    template: `%s - ${siteMetadata.title}`,
+  },
   description: siteMetadata.description,
+  twitter: {
+    card:'summary_large_image',
+  },
   icons: {
     icon: ["/favicon.ico"],
     shortcut: ["/favicon.ico"],
-  },
-  openGraph: {
-    title: siteMetadata.title,
-    description: siteMetadata.description,
-    type: "website",
-    url: siteMetadata.siteUrl,
-    images: [
-      {
-        url: "/path/to/your/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: siteMetadata.title,
-      },
-    ],
   },
 };
 
