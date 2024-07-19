@@ -11,16 +11,6 @@ import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: siteMetadata.title,
-  description: siteMetadata.description,
-  icons: {
-    icon: ["/favicon.ico"],
-    apple: ["/logo.io"],
-    shortcut: ["logo.io"],
-  },
-};
-
 export default function ArticlesLayout({
   children,
   params,

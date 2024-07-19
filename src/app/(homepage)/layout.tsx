@@ -11,7 +11,9 @@ import HeroSection from "@/src/components/HeroSection";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: siteMetadata.title,
+  title: {
+    absolute: siteMetadata.title,
+  },
   description: siteMetadata.description,
   icons: {
     icon: ["/favicon.ico?v=4"],
