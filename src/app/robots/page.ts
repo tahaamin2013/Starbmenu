@@ -6,7 +6,6 @@ export default function robots(): MetadataRoute.Robots {
             {
                 userAgent: "*",
                 allow: "/",
-                disallow: []
             }
         ],
         sitemap: `https://starbmenu.com/sitemap-0.xml`
