@@ -3394,10 +3394,34 @@ export const Menu: Category[] = [
                 image: "/Hot Chocolate.avif",
                 sizes: [
                   {
+                    size: "Kids",
+                    price: "$2.95",
+                    calories: 190,
+                    size2: "8 fl oz",
+                  },
+                  {
+                    size: "Short",
+                    price: "$3.85",
+                    calories: 190,
+                    size2: "8 fl oz",
+                  },
+                  {
                     size: "Tall",
                     price: "$3.95",
                     calories: 280,
                     size2: "12 fl oz",
+                  },
+                  {
+                    size: "Grande",
+                    price: "$4.65",
+                    calories: 370,
+                    size2: "16 fl oz",
+                  },
+                  {
+                    size: "Venti",
+                    price: "$4.95",
+                    calories: 450,
+                    size2: "20 fl oz",
                   },
                 ],
                 link: "",
@@ -3579,7 +3603,7 @@ export const Menu: Category[] = [
                   {
                     size: "Venti",
                     price: "$3.95",
-                    calories: 0,
+                    calories: 250,
                     size2: "20 fl oz",
                   },
                 ],
