@@ -20,23 +20,46 @@ Love sweet drinks? Say hello to Starbucks White Hot Chocolate! It's a yummy trea
 > Picture this: creamy white chocolate mixed with hot milk. On top? A fluffy cloud of whipped cream. Sounds good, right? It's like a hug in a cup!
 
  ### Ingredients
-<div style={{  overflowX: 'auto',
-      position: 'relative',
-      table: { borderCollapse: 'collapse', width: '100%' },
-      'th, & td': { border: '1px solid #ddd', padding: '8px' },
-      'th:first-child, td:first-child': {
-        position: 'sticky',
-        left: 0,
-        zIndex: 1,
-        backgroundColor: 'white',
-      }, }}>
-| Ingredient              | Components                         | Sub-components                          |
-|:------------------------|------------------------------------|-----------------------------------------|
-| MILK                    |                                    |                                         |
-| WHITE CHOCOLATE MOCHA SAUCE | SUGAR , CONDENSED SKIM MILK, COCONUT OIL, COCOA BUTTER, NATURAL FLAVOR, SALT, POTASSIUM SORBATE, MONOGLYCERIDES                        |                                         |
-| WHIPPED CREAM           | CREAM                              | CREAM, MONO AND DIGLYCERIDES, CARAGEENAN                             |
-|                         | VANILLA SYRUP                      | SUGAR, WATER, NATURAL FLAVORS, POTASSIUM SORBATE, CITRIC ACID                                  |
+<div className="table-container">
+
+| Ingredient | Components | Sub-components |
+|:-----------|------------|----------------|
+| MILK | | |
+| WHITE CHOCOLATE MOCHA SAUCE | SUGAR , CONDENSED SKIM MILK, COCONUT OIL, COCOA BUTTER, NATURAL FLAVOR, SALT, POTASSIUM SORBATE, MONOGLYCERIDES | |
+| WHIPPED CREAM | CREAM | CREAM, MONO AND DIGLYCERIDES, CARAGEENAN |
+| | VANILLA SYRUP | SUGAR, WATER, NATURAL FLAVORS, POTASSIUM SORBATE, CITRIC ACID |
+
 </div>
+
+<style jsx>{`
+  .table-container {
+    overflow-x: auto;
+    position: relative;
+  }
+  .table-container table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  .table-container th,
+  .table-container td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    min-width: 100px;
+  }
+  .table-container th:first-child,
+  .table-container td:first-child {
+    position: sticky;
+    left: 0;
+    background-color: white;
+    z-index: 1;
+  }
+  @media (max-width: 768px) {
+    .table-container th:not(:first-child),
+    .table-container td:not(:first-child) {
+      min-width: 200px;
+    }
+  }
+`}</style>
 
 ## Who's it for? 
 Everyone! If you have a sweet tooth but don't like coffee, this drink is for you. Kids love it too!
