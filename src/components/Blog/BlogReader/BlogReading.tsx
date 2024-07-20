@@ -1,5 +1,6 @@
 "use client";
 import { allBlogs } from "contentlayer/generated";
+
 const RenderMdx = dynamic(() => import("../RenderMdx"), {
   ssr: false,
 });
