@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     shortcut: ["logo.io"],
   },
   alternates: {
-    canonical: `${siteMetadata.siteUrl}/cold-coffees`,
+    canonical: `${siteMetadata.siteUrl}cold-coffees`,
   },
 };
 
