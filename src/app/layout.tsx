@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     description: siteMetadata.description,    
   },
   twitter: {
-    card:'summary_large_image',
+    card: 'summary_large_image',
   },
   icons: {
     icon: ["/favicon.ico"],
@@ -35,6 +35,10 @@ export default function RootLayout({
       <head>
         <meta name="theme-color" content="#0b7555" />
         <meta property="og:image" content="https://starbmenu.com/opengraph-image.png" />
+        <link 
+          rel="canonical" 
+          href={`${siteMetadata.siteUrl}${typeof window !== 'undefined' ? window.location.pathname : ''}`} 
+        />
       </head>
       <body className={cx("font-mr")}>{children}</body>
     </html>
