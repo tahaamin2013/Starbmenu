@@ -7,10 +7,7 @@ import { cx } from "../utils";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: {
-    default: siteMetadata.title,
-    template: `%s - ${siteMetadata.title}`,
-  },
+  title: siteMetadata.title,
   description: siteMetadata.description,
   openGraph: {
     title: siteMetadata.title,

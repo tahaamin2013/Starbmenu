@@ -1,9 +1,10 @@
 import CategoryPageComponent from "@/src/components/Category/CategoryPageComponent";
 import React from "react";
+import siteMetadata from "@/src/utils/siteMetaData";
+import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: `${siteMetadata.title} - Cold Cups`,
-  description: "Explore our refreshing selection of cold coffees and iced beverages.",
   openGraph: {
     title: `${siteMetadata.title} - Cold Cups`,
     url: `${siteMetadata.siteUrl}cold-cups`,
