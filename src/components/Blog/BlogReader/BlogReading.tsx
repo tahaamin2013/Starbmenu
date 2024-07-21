@@ -118,7 +118,7 @@ const BlogReading = ({ parmy, blogy }: { parmy: any; blogy: any }) => {
           </h1>
           <BlogDetails blog={blogy} slug={parmy.slug} />
         </div>
-        <div className="flex gap-1 mx-10 md:gap-3 text-left">
+        <div className="flex gap-1 md:gap-3 text-left">
           <div className="flex flex-col gap-2 md:flex-row">
             <div className="flex flex-col gap-[30px] px-3">
               <Product productName={blog.ProductName} />
