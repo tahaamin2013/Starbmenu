@@ -25,4 +25,4 @@ const ColdCoffees = () => {
   return <CategoryPageComponent name="Cold Coffees" link="/cold-coffees" />;
 };
 
-ex
+export default ColdCoffees;
