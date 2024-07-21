@@ -53,7 +53,7 @@ Want to change things up? You can! Try:
 
 ### Nutrition
 <div className="table-container">
-| Nutrition               | Kids<br/>8 fl oz     | Short<br/>8 fl oz<br/>  | Tall <br/>12 fl oz<br/> | Grande 16 <br/> fl oz | Venti <br/>20 fl oz |
+| Nutrition            | Kids<br/>8 fl oz     | Short<br/>8 fl oz<br/>  | Tall <br/>12 fl oz<br/> | Grande 16 <br/> fl oz | Venti <br/>20 fl oz |
 |:---------------------|---------------------:|-----------------:|----------------:|------------------:|-----------------:|
 | Calories             | 200                  | 200              | 300             | 400               | 490              |
 | Calories from Fat    | 90                   | 90               | 120             | 160               | 180              |
@@ -87,8 +87,9 @@ Want to change things up? You can! Try:
   .table-container th,
   .table-container td {
     border: 1px solid #ddd;
-    padding: 8px;
-    min-width: 40px;
+    padding: 5px;
+    min-width: 30px;
+      font-size: 8px;
   }
   .table-container th:first-child,
   .table-container td:first-child {
@@ -119,16 +120,14 @@ Next time you're at Starbucks, try it. It might become your new favorite!  Remem
   }
 `}</style>
 <div style={{
-   display: 'grid',
-  gridTemplateColumns: '1fr 1fr',
           backgroundColor: '#cee3de',
           borderLeft: '3px solid #0c7556',
           padding:'30px'
       }}>
  <div>
- ### Starbucks White Hot Chocolate Price
- 
- Starbucks offers a variety of coffee cup sizes, the prices are as follows:
+### Starbucks White Hot Chocolate Price
+
+Starbucks offers a variety of coffee cup sizes, the prices are as follows:
 <table style={{backgroundColor: "white", width: "100%", padding: "50px", borderCollapse: "collapse", borderRadius: "13px"}}>
   <thead>
     <tr>
