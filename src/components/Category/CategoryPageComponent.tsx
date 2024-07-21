@@ -209,9 +209,10 @@ const CategoryPageComponent: React.FC<{ name: string; link: string }> = ({
               <div className="space-y-4 grid grid-cols-1 md:mt-3 mt-[50px] md:grid-cols-2 gap-[20px]">
                 {Array.from({ length: totalProducts }).map((_, index) => (
                   <div key={index} className="flex items-center space-x-4">
-                    <Skeleton className="h-[80px] w-[84px] rounded-full" />
+                    <Skeleton className="h-[100px] w-[104px] rounded-full" />
                     <div className="space-y-2">
                       <Skeleton className="h-4 w-[170px]" />
+                      <Skeleton className="h-4 w-[80px] mb-4" />
                       <div className="flex justify-between">
                         <Skeleton className="h-4 w-[30px]" />
                         <Skeleton className="h-4 w-[50px]" />
