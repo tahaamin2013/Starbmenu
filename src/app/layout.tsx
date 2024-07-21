@@ -39,18 +39,6 @@ export default function RootLayout({
           rel="canonical" 
           href={`${siteMetadata.siteUrl}${typeof window !== 'undefined' ? window.location.pathname : ''}`} 
         />
-        <link
-          rel="canonical"
-          href={`${siteMetadata.siteUrl}/featured`}
-        />
-        <link
-          rel="canonical"
-          href={`${siteMetadata.siteUrl}/hot-coffees`}
-        />
-        <link
-          rel="canonical"
-          href={`${siteMetadata.siteUrl}/cold-coffees`}
-        />
       </head>
       <body className={cx("font-mr")}>{children}</body>
     </html>
