@@ -12,13 +12,27 @@ import Link from "next/link";
 import GoyButtonforHeroSection from "../GoyButtonforHeroSection";
 import Goy from "../goy";
 
-function shuffleArray(array: any[]) {
-  for (let i = array.length - 1; i > 0; i--) {
+// Utility function to convert names to URL-friendly format
+const convertNameToLink = (name: string) => {
+  return name
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/&/g, "and")
+    .replace(/[®™,.\s]+/g, "-")
+    .replace(/-+/g, "-")
+    .replace(/^-+|-+$/g, "");
+};
+
+// Shuffle function
+const shuffleArray = <T,>(array: T[]): T[] => {
+  const shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
   }
-  return array;
-}
+  return shuffled;
+};
 
 const HeroSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -31,13 +45,14 @@ const HeroSection = () => {
 
   const [emblaRef, emblaApi] = useEmblaCarousel({ axis: "y" });
 
+  // Shuffle products
   const allProducts = useMemo(() => {
     const products = Menu.flatMap((category) =>
       category.items.flatMap((item) =>
         item.subItems.flatMap((subItem) => subItem.products)
       )
     );
-    return shuffleArray([...products]);
+    return shuffleArray(products);
   }, []);
 
   const scrollTo = useCallback(
@@ -49,26 +64,24 @@ const HeroSection = () => {
     [emblaApi]
   );
 
-  const handleProductClick = useCallback(
-    (product: any, index: number) => {
-      setSelectedProduct(product);
-      setCurrentIndex(index);
+  const handleProductClick = useCallback((product: any, index: number) => {
+    setSelectedProduct(product);
+    setCurrentIndex(index);
 
-      // Update the selected category
-      Menu.forEach((category) => {
-        category.items.forEach((item) => {
-          item.subItems.forEach((subItem) => {
-            if (subItem.products.includes(product)) {
-              setSelectedCategory(item);
-            }
-          });
-        });
-      });
-
-      scrollTo(index);
-    },
-    [scrollTo]
-  );
+    // Find and set the category based on the selected product
+    for (const category of Menu) {
+      for (const item of category.items) {
+        for (const subItem of item.subItems) {
+          if (subItem.products.includes(product)) {
+            setSelectedCategory(item);
+            return;
+          }
+        }
+      }
+    }
+    // If no category is found, default to the first item
+    setSelectedCategory(Menu[0].items[0]);
+  }, []);
 
   const handleNextSlide = useCallback(() => {
     if (emblaApi && canScrollNext) {
@@ -89,6 +102,18 @@ const HeroSection = () => {
     const currentIndex = emblaApi.selectedScrollSnap();
     setCurrentIndex(currentIndex);
     setSelectedProduct(allProducts[currentIndex]);
+
+    // Update the selected category based on the currently selected product
+    for (const category of Menu) {
+      for (const item of category.items) {
+        for (const subItem of item.subItems) {
+          if (subItem.products.includes(allProducts[currentIndex])) {
+            setSelectedCategory(item);
+            return;
+          }
+        }
+      }
+    }
   }, [emblaApi, allProducts]);
 
   useEffect(() => {
@@ -98,19 +123,8 @@ const HeroSection = () => {
     }
   }, [emblaApi, onSelect]);
 
-  function convertNameToLink(name: any) {
-    return name
-      .normalize("NFD")
-      .replace(/[\u0300-\u036f]/g, "")
-      .toLowerCase()
-      .replace(/&/g, "and")
-      .replace(/[®™,.\s]+/g, "-")
-      .replace(/-+/g, "-")
-      .replace(/^-+|-+$/g, "");
-  }
-
   const link = convertNameToLink(selectedProduct.name);
-  const categorylink = convertNameToLink(selectedCategory.name);
+  const categoryLink = convertNameToLink(selectedCategory.name);
 
   return (
     <section className="w-full">
@@ -165,7 +179,7 @@ const HeroSection = () => {
         <div className="flex relative overflow-hidden bg-white  w-full  justify-between pl-[94px] py-[40px]">
           <div className="text-center z-50 flex flex-col items-center justify-center gap-3">
             <div className="ml-0 md:mt-0 mt-5 md:ml-6">
-              <Link href={`${categorylink}/${link}`}>
+              <Link href={`/${link}`}>
                 <Image
                   className="rounded-full max-w-[200px] md:max-w-[280px] shadow-glow shadow-primary"
                   src={selectedProduct.image}
@@ -177,13 +191,13 @@ const HeroSection = () => {
               </Link>
             </div>
             <div className="mt-2 flex w-full items-center justify-center flex-col">
-              <Link href={`${categorylink}/${link}`}>
+              <Link href={`/${categoryLink}/${link}`}>
                 <span className="font-bold max-w-xs mb-3 text-xl lg:text-2xl line-clamp-2 h-[60px]">
                   {selectedProduct.name}
                 </span>
               </Link>
               <div className="flex flex-col gap-2">
-                <Link href={`${categorylink}/${link}`}>
+                <Link href={`/${categoryLink}/${link}`}>
                   <Button className="text-white rounded-full duration-500 transition-all text-sm lg:text-base">
                     View Price & Calories
                   </Button>
@@ -260,6 +274,7 @@ const HeroSection = () => {
               <ArrowRight className="h-6 lg:h-8 text-white w-6 lg:w-8 p-1 lg:p-2 rotate-90" />
             </button>
           </div>
+
           <div className="w-[300px] absolute -left-[13rem] bottom-4 h-[300px] bg-orange-300 rounded-full blur-3xl" />
           <div className="w-[300px] absolute -left-[13rem] top-4  h-[100px] bg-orange-300 rounded-full blur-3xl" />
           <div className="w-[400px] absolute right-4 -bottom-32 h-[307px] bg-[#C0E8A6] rounded-full blur-2xl" />
@@ -268,5 +283,6 @@ const HeroSection = () => {
       </div>
     </section>
   );
-};  
+};
+
 export default HeroSection;
