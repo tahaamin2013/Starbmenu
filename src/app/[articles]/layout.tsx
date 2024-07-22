@@ -27,7 +27,7 @@ export default function ArticlesLayout({
   //   "lunch",
   //   "milk-juice-and-more",
   //   "mugs",
-  //   "oatmeal-and-yougurt",
+  //   "oatmeal-and-yogurt",
   //   "other",
   //   "snacks-and-sweets",
   //   "starbucks-refreshers-beverages",

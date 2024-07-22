@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import siteMetadata from "../utils/siteMetaData";
 import { cx } from "../utils";
+import Script from 'next/script';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,6 +28,21 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const schemaMarkup = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "StarbMenu",
+    "url": "https://starbmenu.com/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://starbmenu.com/"
+      },
+      "query-input": "required name=search_term_string"
+    },
+  };
+
   return (
     <html lang="en">
       <head>
@@ -35,6 +51,11 @@ export default function RootLayout({
         <link 
           rel="canonical" 
           href={`${siteMetadata.siteUrl}${typeof window !== 'undefined' ? window.location.pathname : ''}`} 
+        />
+        <Script 
+          id="schema-markup" 
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }}
         />
       </head>
       <body className={cx("font-mr")}>{children}</body>

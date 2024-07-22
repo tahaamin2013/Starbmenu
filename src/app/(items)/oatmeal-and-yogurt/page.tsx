@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: `${siteMetadata.title} - Oatmeal & Yogurt`,
   openGraph: {
     title: `${siteMetadata.title} - Oatmeal & Yogurt`,
-    url: `${siteMetadata.siteUrl}oatmeal-and-yougurt`,
+    url: `${siteMetadata.siteUrl}oatmeal-and-yogurt`,
   },
   icons: {
     icon: ["/favicon.ico"],
@@ -15,17 +15,17 @@ export const metadata: Metadata = {
     shortcut: ["favicon.ico"],
   },
   alternates: {
-    canonical: `${siteMetadata.siteUrl}oatmeal-and-yougurt`,
+    canonical: `${siteMetadata.siteUrl}oatmeal-and-yogurt`,
   },
 };
 
-const OatmealAndYougurt = () => {
+const OatmealAndYogurt = () => {
   return (
     <CategoryPageComponent
       name="Oatmeal & Yogurt"
-      link="/oatmeal-and-yougurt"
+      link="/oatmeal-and-yogurt"
     />
   );
 };
 
-export default OatmealAndYougurt;
+export default OatmealAndYogurt;

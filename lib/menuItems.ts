@@ -3990,7 +3990,7 @@ export const Menu: Category[] = [
       {
         name: "Oatmeal & Yogurt",
         image: "/Oatmeal & Yogurt.avif",
-        link: "oatmeal-and-yougurt",
+        link: "oatmeal-and-yogurt",
         subItems: [
           {
             category: "Oatmeal & Yogurt",
