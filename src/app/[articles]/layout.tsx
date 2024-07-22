@@ -86,6 +86,3 @@ export default function ArticlesLayout({
     </html>
   );
 }
-
-// This ensures the layout is treated as a Server Component
-// export const dynamic = "force-dynamic";

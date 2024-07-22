@@ -5,16 +5,18 @@ import React from "react";
 
 export const metadata: Metadata = {
   title: `${siteMetadata.title} - Cold Coffees`,
-  description: "Explore our refreshing selection of cold coffees and iced beverages.",
+  description:
+    "Explore our refreshing selection of cold coffees and iced beverages.",
   openGraph: {
     title: `${siteMetadata.title} - Cold Coffees`,
-    description: "Explore our refreshing selection of cold coffees and iced beverages.",
+    description:
+      "Explore our refreshing selection of cold coffees and iced beverages.",
     url: `${siteMetadata.siteUrl}/cold-coffees`,
   },
   icons: {
-    icon: ["/favicon.ico?v=4"],
-    apple: ["/logo.io?v=4"],
-    shortcut: ["logo.io"],
+    icon: ["/favicon.ico"],
+    apple: ["/favicon.ico"],
+    shortcut: ["favicon.ico"],
   },
   alternates: {
     canonical: `${siteMetadata.siteUrl}cold-coffees`,

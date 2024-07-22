@@ -10,9 +10,9 @@ export const metadata: Metadata = {
     url: `${siteMetadata.siteUrl}milk-juice-and-more`,
   },
   icons: {
-    icon: ["/favicon.ico?v=4"],
-    apple: ["/logo.io?v=4"],
-    shortcut: ["logo.io"],
+    icon: ["/favicon.ico"],
+    apple: ["/favicon.ico"],
+    shortcut: ["favicon.ico"],
   },
   alternates: {
     canonical: `${siteMetadata.siteUrl}milk-juice-and-more`,

@@ -10,7 +10,6 @@ import { Button } from "../ui/button";
 import MobileHerosection from "./MobileHerosection";
 import Link from "next/link";
 import GoyButtonforHeroSection from "../GoyButtonforHeroSection";
-import Goy from "../goy";
 
 // Utility function to convert names to URL-friendly format
 const convertNameToLink = (name: string) => {
