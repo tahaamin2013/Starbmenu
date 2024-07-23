@@ -13,6 +13,7 @@ const ProfileSection = () => {
                 alt="Writer Amin Ahsan Image"
                 width={5080}
                 height={5000}
+                loading="lazy"
                 src="/Author.jpg"
                 className="rounded-full border-2 border-white shadow-xl object-cover h-full w-full"
               />
