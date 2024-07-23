@@ -82,7 +82,8 @@ const MobileHerosection = () => {
                     alt={product.name}
                     width={400}
                     height={400}
-                    priority // Add this to prioritize image loading
+                    // priority // Add this to prioritize image loading
+                    loading="lazy"
                   />
 
                   <span className="font-bold text-xl mt-1">{product.name}</span>
