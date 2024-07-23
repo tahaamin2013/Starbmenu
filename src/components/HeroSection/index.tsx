@@ -2,10 +2,9 @@
 
 import Image from "next/image";
 import React, { useState, useCallback, useEffect, useMemo } from "react";
-import { motion } from "framer-motion";
 import useEmblaCarousel from "embla-carousel-react";
 import { Menu } from "@/lib/menuItems";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Button } from "../ui/button";
 import MobileHerosection from "./MobileHerosection";
 import Link from "next/link";

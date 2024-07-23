@@ -25,7 +25,6 @@ import {
 } from "../../ui/breadcrumb";
 import { Slash } from "lucide-react";
 import { useState } from "react";
-import { motion } from "framer-motion"; // Import motion from Framer Motion
 import dynamic from "next/dynamic";
 import Link from "next/link";
 
@@ -151,15 +150,11 @@ const BlogReading = ({ parmy, blogy }: { parmy: any; blogy: any }) => {
           <div className="flex flex-col gap-2 md:flex-row">
             <div className="flex flex-col gap-[30px] px-3">
               <Product productName={blog.ProductName} />
-              <motion.div
-                id="ads-section"
+              <div
                 className={`hidden md:flex flex-col gap-[100px]`}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3, delay: 0.3 }} // Delayed animation for smoother transition
               >
                 <ProfileSection />
-              </motion.div>
+              </div>
             </div>
             <RenderMdx blog={blogy} />
           </div>

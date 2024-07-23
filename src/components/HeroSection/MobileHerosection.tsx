@@ -80,10 +80,11 @@ const MobileHerosection = () => {
                     className="rounded-full w-[12rem]"
                     src={product.image}
                     alt={product.name}
-                    loading="lazy"
                     width={400}
                     height={400}
+                    priority // Add this to prioritize image loading
                   />
+
                   <span className="font-bold text-xl mt-1">{product.name}</span>
                   <Link
                     href={`${categorylink}/${link}`}

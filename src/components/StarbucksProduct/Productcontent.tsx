@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
 import { useInView } from "react-intersection-observer";
@@ -38,21 +37,8 @@ const ProductContent = ({ subItem, delay }: any) => {
   const [selectedSize, setSelectedSize] = useState(initialSize);
 
   return (
-    <motion.div
-      ref={ref}
-      initial="hidden"
-      animate={inView ? "visible" : "hidden"}
-      variants={variants}
-      transition={{ duration: 0.3, delay }}
-      className="flex gap-8 flex-col mb-8 md:mb-1 md:flex-row "
-    >
-      <motion.div
-        initial="hidden"
-        animate={inView ? "visible" : "hidden"}
-        variants={variants}
-        transition={{ duration: 0.3, delay }}
-        className="flex flex-col mb-6 items-center gap-5"
-      >
+    <div className="flex gap-8 flex-col mb-8 md:mb-1 md:flex-row ">
+      <div className="flex flex-col mb-6 items-center gap-5">
         <Image
           src={subItem.image}
           loading="lazy"
@@ -128,8 +114,8 @@ const ProductContent = ({ subItem, delay }: any) => {
             </div>
           </div>
         </div>
-      </motion.div>
-    </motion.div>
+      </div>
+    </div>
   );
 };
 

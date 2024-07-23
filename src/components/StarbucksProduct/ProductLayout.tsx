@@ -1,10 +1,8 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { useInView } from "react-intersection-observer";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -34,11 +32,6 @@ function convertNameToLink(name: any) {
 }
 
 const ProductLayout = ({ subItem, delay }: any) => {
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
-
   const hasSize = subItem.size;
   const hasSizes = subItem.sizes && subItem.sizes.length > 0;
   const productName = subItem.name;
@@ -83,21 +76,8 @@ const ProductLayout = ({ subItem, delay }: any) => {
   const categoryUrl = toUrlFriendly(category);
 
   return (
-    <motion.div
-      ref={ref}
-      initial="hidden"
-      animate={inView ? "visible" : "hidden"}
-      variants={variants}
-      transition={{ duration: 0.3, delay }}
-      className="flex gap-8 flex-col mb-8 md:mb-1 md:flex-row "
-    >
-      <motion.div
-        initial="hidden"
-        animate={inView ? "visible" : "hidden"}
-        variants={variants}
-        transition={{ duration: 0.3, delay }}
-        className="flex flex-row mb-6 items-center gap-5"
-      >
+    <div className="flex gap-8 flex-col mb-8 md:mb-1 md:flex-row ">
+      <div className="flex flex-row mb-6 items-center gap-5">
         <Link
           href={`/${categoryUrl}/${link}`}
           aria-label={`Starbucks ${productName}`}
@@ -200,8 +180,8 @@ const ProductLayout = ({ subItem, delay }: any) => {
             </div>
           </div>
         </div>
-      </motion.div>
-    </motion.div>
+      </div>
+    </div>
   );
 };
 
