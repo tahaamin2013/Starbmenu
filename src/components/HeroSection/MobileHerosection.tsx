@@ -66,7 +66,6 @@ const MobileHerosection = () => {
         <Carousel className="max-w-full h-[400px] mb-6 lg:hidden block overflow-hidden">
           <div className="w-[300px] absolute -left-[13rem] -bottom-0 h-[200px] bg-orange-300 rounded-full blur-3xl" />
           <div className="w-[400px] absolute -right-[13rem] top-[10px] h-[307px] bg-[#C0E8A6] rounded-full blur-2xl" />
-
           <CarouselContent>
             {allProducts.map((product, index) => {
               const link = convertNameToLink(product.name);
@@ -74,7 +73,7 @@ const MobileHerosection = () => {
               return (
                 <CarouselItem
                   key={product.link}
-                  className="pt-1 flex flex-col gap-3  w-full items-center px-10 justify-center text-center"
+                  className="flex flex-col gap-3 w-full items-center px-10 justify-center text-center"
                 >
                   <Image
                     className="rounded-full w-[12rem]"
@@ -86,7 +85,7 @@ const MobileHerosection = () => {
                     loading="lazy"
                   />
 
-                  <span className="font-bold text-xl mt-1">{product.name}</span>
+                  <span className="font-bold text-xl">{product.name}</span>
                   <Link
                     href={`${categorylink}/${link}`}
                     className="w-fit px-6 text-white rounded-full bg-primary py-2 text-[15px] duration-500 transition-all"
