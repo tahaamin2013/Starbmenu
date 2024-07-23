@@ -45,7 +45,10 @@ const nextConfig = {
           },
         ]
         // TODO: Add All redirections
-      },
+  },
+  images: {
+    domains: ['res.cloudinary.com'],
+  },
 };
 
 module.exports = withContentlayer({ ...nextConfig });
