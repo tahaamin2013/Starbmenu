@@ -21,7 +21,6 @@ export type Item = {
   subItems: SubItem[];
 };
 export type Category = { category: string; items: Item[] };
-// lib/utils.ts
 
 export const Menu: Category[] = [
   // Drinks
@@ -30,7 +29,7 @@ export const Menu: Category[] = [
     items: [
       {
         name: "Hot Coffees",
-        image: "/hot cofee.avif",
+        image: "https://res.cloudinary.com/dppwohnth/image/upload/v1721705444/hot_cofee_pu2z2p.avif",
         link: "hot-coffees",
         subItems: [
           {
@@ -38,7 +37,7 @@ export const Menu: Category[] = [
             products: [
               {
                 name: "Caffè Americano",
-                image: "/to.avif",
+                image: "https://res.cloudinary.com/dppwohnth/image/upload/v1721705966/to_bzuf1e.avif",
                 link: "caffe-americano",
                 sizes: [
                   {
@@ -74,7 +73,7 @@ export const Menu: Category[] = [
             products: [
               {
                 name: "Veranda Blend® Clover Vertica™",
-                image: "/to.avif",
+                image: "https://res.cloudinary.com/dppwohnth/image/upload/v1721705966/to_bzuf1e.avif",
                 link: "veranda-blend-clover-vertica",
                 sizes: [
                   {

@@ -15,51 +15,147 @@ tags:
 
  
 ## Java Chip Frappuccino® Blended Beverage 
-  
-<div className="tables-container">
-  <div className="table-wrapper">
-    | Ingredients  |  
-    |:-------------|
-    | ICE        |
-    | MILK       |
-    | COFFEE FRAPPUCCINO SYRUP [SUGAR, WATER, NATURAL FLAVOR, SALT, XANTHAN GUM, POTASSIUM SORBATE, CITRIC ACID]     |
-    | WHIPPED CREAM [CREAM (CREAM, MONO AND DIGLYCERIDES, CARAGEENAN), VANILLA SYRUP (SUGAR, WATER, NATURAL FLAVORS, POTASSIUM SORBATE, CITRIC ACID)]     |
-    | COFFEE |
-    | MOCHA SAUCE [WATER, SUGAR, COCOA PROCESSED WITH ALKALI, NATURAL FLAVOR] |
-    | FRAPPUCCINO CHIPS [CONFECTIONERY COATING (SUGAR, PALM KERNEL AND PALM OILS, COCOA PROCESSED WITH ALKALI, SOY LECITHIN, VANILLA, MILK), COCOA (PROCESSED WITH ALKALI, 9%), COOKIE CRUMBS (UNBLEACHED UNENRICHED WHEAT FLOUR, SUGAR, PALM AND PALM KERNEL OIL, COCOA PROCESSED WITH ALKALI, CHOCOLATE MASS, SALT, SODIUM BICARBONATE, SOY LECITHIN, NATURAL FLAVOR), CHOCOLATE MASS (2%), AND SALT] |
-  </div>
-  <div className="table-wrapper">
-    | Nutrition               |                      |  
-    |:------------------------|---------------------:|
-    | Calories                | 440                   |
-    | Total Fat               | 19 g                  |
-    | Saturated Fat           | 12 g                  |
-    | Trans Fat               | 0.5 g                  |
-    | Cholesterol             | 45 mg                 |
-    | Sodium                  | 260 mg                |
-    | Total Carbohydrates     | 64 g                  |
-    | Dietary Fiber           | 2 g                  |
-    | Sugars                  | 59 g                  |
-    | Protein                 | 6 g                  |
-    | Caffeine                | 105 mg               |
-  </div>
+
+
+### Ingredients
+
+<div style={{ overflowX: "scroll", fontSize: "14px" }}>
+  | Ingredient                         | Components       | Sub-components |
+  |:-----------------------------------|------------------|----------------|
+  |                                    |                  |                | 
 </div>
+
+
+### Nutrition
+
+<div className="table-container">
+| <span style={{color: "black"}}>Nutrition</span>            | Kids<br/>8 fl oz     | Short<br/>8 fl oz<br/>  | Tall <br/>12 fl oz<br/> | Grande 16 <br/> fl oz | Venti <br/>20 fl oz |
+|:---------------------|---------------------:|-----------------:|----------------:|------------------:|-----------------:|
+| Calories             | 200                  | 200              | 300             | 400               | 490              |
+| Total Fat            | 10 g                 | 10 g             | 14 g            | 18 g              | 20 g             |
+| Saturated Fat        | 7 g                  | 7 g              | 9 g             | 12 g              | 14 g             |
+| Trans Fat            | 0 g                  | 0 g              | 0 g             | 0.5 g             | 0.5 g            |
+| Cholesterol          | 30 mg                | 30 mg            | 40 mg           | 50 mg             | 60 mg            |
+| Sodium               | 105 mg               | 105 mg           | 170 mg          | 240 mg            | 300 mg           |
+| Total Carbohydrates  | 23 g                 | 23 g             | 35 g            | 48 g              | 60 g             |
+| Dietary Fiber        | 0 g                  | 0 g              | 0 g             | 0 g               | 0 g              |
+| Sugars               | 23 g                 | 23 g             | 35 g            | 48 g              | 59 g             |
+| Protein              | 6 g                  | 6 g              | 10 g            | 14 g              | 18 g             |
+| Caffeine             | 0 mg                 | 0 mg             | 0 mg            | 0 mg              | 0 mg             |
+
+</div>
+
 <style jsx>{`
-  .tables-container {
-    display: flex;
-    flex-direction: row;
-    gap: 30px;
+  .table-container {
+    overflow-x: auto;
+    position: relative;
   }
-  .table-wrapper {
-    width: 500px; /* Adjust as needed */
+  .table-container table {
+    border-collapse: collapse;
+    width: 80%;
+  }
+  .table-container th,
+  .table-container td {
+    border: 1px solid #ddd;
+    padding: 2px;
+    min-width: 30px;
+    font-size: 11px;
+  }
+  .table-container th:first-child,
+  .table-container td:first-child {
+    position: sticky;
+    left: 0;
+    background-color: white;
+    z-index: 1;
   }
   @media (max-width: 768px) {
-    .tables-container {
-      flex-direction: column;
-      gap: 0px; /* Adjust as needed */
-    }
-    .table-wrapper {
-      width: 100%; /* Adjust as needed */
+    .table-container th:not(:first-child),
+    .table-container td:not(:first-child) {
+      min-width: 50px;
     }
   }
 `}</style>
+
+★ Caffeine is an approximate value
+
+General nutrition advice uses 2,000 calories a day, but calorie needs vary.
+
+Try it out! It might become your new favorite! 
+
+<style jsx>{`
+  @media (min-width: 768px) {
+    .responsive-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+`}</style>
+
+<div
+  style={{
+    backgroundColor: "#cee3de",
+    borderLeft: "3px solid #0c7556",
+    padding: "30px",
+    display: "grid",
+        height: "fit-content",
+
+  }}
+  class="responsive-grid"
+>
+  <div >
+    <h3>Starbucks White Hot Chocolate Price</h3>
+    <p>
+      Starbucks offers a variety of coffee cup sizes, the prices are as follows:
+    </p>
+    <table
+      style={{
+        backgroundColor: "white",
+        width: "100%",
+        padding: "50px",
+        borderCollapse: "collapse",
+        borderRadius: "13px",
+      }}
+    >
+      <thead>
+        <tr>
+          <th style={{ padding: "8px 24px", textAlign: "left" }}>Size</th>
+          <th style={{ padding: "8px 24px", textAlign: "left" }}>Volume</th>
+          <th style={{ padding: "8px 24px", textAlign: "left" }}>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style={{ padding: "8px 24px", textAlign: "left" }}>Kids</td>
+          <td style={{ padding: "8px 24px", textAlign: "left" }}>8 fl oz</td>
+          <td style={{ padding: "8px 24px", textAlign: "left" }}>$3.75</td>
+        </tr>
+        <tr>
+          <td style={{ padding: "8px 24px", textAlign: "left" }}>Short</td>
+          <td style={{ padding: "8px 24px", textAlign: "left" }}>8 fl oz</td>
+          <td style={{ padding: "8px 24px", textAlign: "left" }}>$4.65</td>
+        </tr>
+        <tr>
+          <td style={{ padding: "8px 24px", textAlign: "left" }}>Tall</td>
+          <td style={{ padding: "8px 24px", textAlign: "left" }}>12 fl oz</td>
+          <td style={{ padding: "8px 24px", textAlign: "left" }}>$4.75</td>
+        </tr>
+        <tr>
+          <td style={{ padding: "8px 24px", textAlign: "left" }}>Grande</td>
+          <td style={{ padding: "8px 24px", textAlign: "left" }}>16 fl oz</td>
+          <td style={{ padding: "8px 24px", textAlign: "left" }}>$5.45</td>
+        </tr>
+        <tr>
+          <td style={{ padding: "8px 24px", textAlign: "left" }}>Venti</td>
+          <td style={{ padding: "8px 24px", textAlign: "left" }}>20 fl oz</td>
+          <td style={{ padding: "8px 24px", textAlign: "left" }}>$5.75</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>
+      These prices apply particularly to the United States and are for the year
+      2024.
+    </p>
+  </div>
+  {  /* <div>Ad Will Show Here</div> */}
+  <div></div>
+</div>
