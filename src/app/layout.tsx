@@ -12,8 +12,7 @@ export const metadata: Metadata = {
   description: siteMetadata.description,
   openGraph: {
     title: siteMetadata.title,
-    description: siteMetadata.description,    
-  },
+    description: siteMetadata.description,},
   twitter: {
     card: 'summary_large_image',
   },

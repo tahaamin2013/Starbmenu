@@ -4,7 +4,6 @@ export default function robots() {
       {
         userAgent: '*',
         allow: '/',
-        crawlDelay: 432000,
       }
     ],
     sitemap: 'https://starbmenu.com/sitemap-0.xml',
