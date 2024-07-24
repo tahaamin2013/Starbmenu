@@ -29,93 +29,84 @@ The standard Java Chip Frappuccino has:
 The standard number of Frappuccino Roast pumps, mocha sauce pumps, and Frappuccino chips varies depending on the drink size.
 
 
+    | Standard Recipe                   | Frappuccino Roast pumps   | Mocha Sauce pumps                   | Frappuccino chips|
+    |-----------------------------------|:--------------------------|:-----------------------------------=|:-----------------|
+    | Tall                              | 2                         | 2                                   | 2                |
+    | Grande                            | 3                         | 3                                   |  3               |
+    | Venti                             | 4                         | 4                                   |  4               |
+
+
 ### Ingredients
 
 <div style={{ overflowX: "scroll", fontSize: "14px" }}>
   | Ingredient                         | Components       | Sub-components |
   |:-----------------------------------|------------------|----------------|
-  |                                    |                  |                | 
+  | ICE                                |                  |                | 
+  | MILK                               |                  |                | 
+  | COFFEE FRAPPUCCINO SYRUP           | SUGAR, WATER, NATURAL FLAVOR, SALT, XANTHAN GUM, POTASSIUM SORBATE, CITRIC ACID                 |                | 
+  | WHIPPED CREAM                      | CREAM            | CREAM, MONO AND DIGLYCERIDES, CARAGEENAN               | 
+  |                                    | VANILLA SYRUP    | SUGAR, WATER, NATURAL FLAVORS, POTASSIUM SORBATE, CITRIC ACID               | 
+  | COFFEE                             |                  |                | 
+  | MOCHA SAUCE                        | WATER, SUGAR, COCOA PROCESSED WITH ALKALI, NATURAL FLAVOR                 |                | 
+  | FRAPPUCCINO CHIPS                  |CONFECTIONERY COATING| SUGAR, PALM KERNEL AND PALM OILS, COCOA PROCESSED WITH ALKALI, SOY LECITHIN, VANILLA, MILK               | 
+  |                                    | COCOA            | PROCESSED WITH ALKALI, 9%| 
+  |                                    | COOKIE CRUMBS    |UNBLEACHED UNENRICHED WHEAT FLOUR, SUGAR, PALM AND PALM KERNEL OIL, COCOA PROCESSED WITH ALKALI, CHOCOLATE MASS, SALT, SODIUM BICARBONATE, SOY LECITHIN, NATURAL FLAVOR                | 
+  |                                    | CHOCOLATE MASS (2%), AND SALT                   |                | 
 </div>
 
+Want to change things up? You can! Try:
+- Adjusting the number of Frappuccino Roast pumps, mocha sauce pumps, and Frappuccino chips (0-12).
+- Customising the whipped cream: none, light, regular, or extra.
+- Selecting alternative milk options: 
+   - Standard options: Non-fat, 2%, or whole milk
+   - Dairy alternatives: Almond, coconut, oat, or soy milk
+   - Creamy choices: Breve (half & half), heavy cream, or sweet cream
+   - Special option: Non-dairy vanilla sweet cream
+- Modifying the mocha drizzle: standard, extra mocha drizzle, light mocha drizzle, or no mocha drizzle.
+
+One tall 12 fl oz cup has 320 calories, 42g sugar, and 14g fat. 
 
 ### Nutrition
 
 <div className="table-container">
 | <span style={{color: "black"}}>Nutrition</span>            | Kids<br/>8 fl oz     | Short<br/>8 fl oz<br/>  | Tall <br/>12 fl oz<br/> | Grande 16 <br/> fl oz | Venti <br/>20 fl oz |
 |:---------------------|---------------------:|-----------------:|----------------:|------------------:|-----------------:|
-| Calories             | 200                  | 200              | 300             | 400               | 490              |
-| Total Fat            | 10 g                 | 10 g             | 14 g            | 18 g              | 20 g             |
-| Saturated Fat        | 7 g                  | 7 g              | 9 g             | 12 g              | 14 g             |
-| Trans Fat            | 0 g                  | 0 g              | 0 g             | 0.5 g             | 0.5 g            |
-| Cholesterol          | 30 mg                | 30 mg            | 40 mg           | 50 mg             | 60 mg            |
-| Sodium               | 105 mg               | 105 mg           | 170 mg          | 240 mg            | 300 mg           |
-| Total Carbohydrates  | 23 g                 | 23 g             | 35 g            | 48 g              | 60 g             |
-| Dietary Fiber        | 0 g                  | 0 g              | 0 g             | 0 g               | 0 g              |
-| Sugars               | 23 g                 | 23 g             | 35 g            | 48 g              | 59 g             |
-| Protein              | 6 g                  | 6 g              | 10 g            | 14 g              | 18 g             |
-| Caffeine             | 0 mg                 | 0 mg             | 0 mg            | 0 mg              | 0 mg             |
+
+
+| <span style={{color: "black"}}>Nutrition</span>| Tall<br/>12 fl oz    | Grande<br/>16 fl oz  | Venti<br/>24 fl oz       |
+|---------------------|----------------------|----------------------|--------------------------|
+| **Calories**        | 320                  | 320                  | 560                      |
+| **Total Fat**       | 14 g                 | 14 g                 | 22 g                     |
+| **Saturated Fat**   | 9 g                  | 9 g                  | 14 g                     |
+| **Trans Fat**       | 0 g                  | 0 g                  | 0.5 g                    |
+| **Cholesterol**     | 35 mg                | 35 mg                | 50 mg                    |
+| **Sodium**          | 190 mg               | 190 mg               | 350 mg                   |
+| **Total Carbohydrates** | 46 g             | 46 g                 | 86 g                     |
+| **Dietary Fiber**   | 2 g                  | 2 g                  | 3 g                      |
+| **Sugars**          | 42 g                 | 42 g                 | 79 g                     |
+| **Protein**         | 4 g                  | 4 g                  | 8 g                      |
+| **Caffeine**        | 75 mg*               | 75 mg*               | 145 mg*                  |
 
 </div>
 
-<style jsx>{`
-  .table-container {
-    overflow-x: auto;
-    position: relative;
-  }
-  .table-container table {
-    border-collapse: collapse;
-    width: 80%;
-  }
-  .table-container th,
-  .table-container td {
-    border: 1px solid #ddd;
-    padding: 2px;
-    min-width: 30px;
-    font-size: 11px;
-  }
-  .table-container th:first-child,
-  .table-container td:first-child {
-    position: sticky;
-    left: 0;
-    background-color: white;
-    z-index: 1;
-  }
-  @media (max-width: 768px) {
-    .table-container th:not(:first-child),
-    .table-container td:not(:first-child) {
-      min-width: 50px;
-    }
-  }
-`}</style>
+Try it out! Your taste buds will thank you!
 
-★ Caffeine is an approximate value
-
-General nutrition advice uses 2,000 calories a day, but calorie needs vary.
-
-Try it out! It might become your new favorite! 
-
-<style jsx>{`
-  @media (min-width: 768px) {
-    .responsive-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-    }
-  }
-`}</style>
 
 <div
   style={{
     backgroundColor: "#cee3de",
     borderLeft: "3px solid #0c7556",
-    padding: "30px",
-    display: "grid",
+   padding: "20px",
+    paddingTop: "13px", // Add padding to the top
+        display: "grid",
         height: "fit-content",
-
-  }}
+      }} 
+      
   class="responsive-grid"
+
 >
-  <div >
-    <h3>Starbucks White Hot Chocolate Price</h3>
+  <div>
+    <h3 style={{marginTop:'-5px'}}>Starbucks Java Chip Frappuccino® Blended Beverage Price</h3>
     <p>
       Starbucks offers a variety of coffee cup sizes, the prices are as follows:
     </p>
@@ -125,41 +116,32 @@ Try it out! It might become your new favorite!
         width: "100%",
         padding: "50px",
         borderCollapse: "collapse",
-        borderRadius: "13px",
+            borderRadius: "13px",
+        
       }}
     >
       <thead>
         <tr>
-          <th style={{ padding: "8px 24px", textAlign: "left" }}>Size</th>
+          <th style={{ padding: "8px 20px", textAlign: "left" }}>Size</th>
           <th style={{ padding: "8px 24px", textAlign: "left" }}>Volume</th>
           <th style={{ padding: "8px 24px", textAlign: "left" }}>Price</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td style={{ padding: "8px 24px", textAlign: "left" }}>Kids</td>
-          <td style={{ padding: "8px 24px", textAlign: "left" }}>8 fl oz</td>
-          <td style={{ padding: "8px 24px", textAlign: "left" }}>$3.75</td>
-        </tr>
-        <tr>
-          <td style={{ padding: "8px 24px", textAlign: "left" }}>Short</td>
-          <td style={{ padding: "8px 24px", textAlign: "left" }}>8 fl oz</td>
-          <td style={{ padding: "8px 24px", textAlign: "left" }}>$4.65</td>
-        </tr>
-        <tr>
-          <td style={{ padding: "8px 24px", textAlign: "left" }}>Tall</td>
+          <td style={{ padding: "8px 20px", textAlign: "left" }}>Tall</td>
           <td style={{ padding: "8px 24px", textAlign: "left" }}>12 fl oz</td>
-          <td style={{ padding: "8px 24px", textAlign: "left" }}>$4.75</td>
+          <td style={{ padding: "8px 24px", textAlign: "left" }}>$5.95</td>
         </tr>
         <tr>
-          <td style={{ padding: "8px 24px", textAlign: "left" }}>Grande</td>
+          <td style={{ padding: "8px 20px", textAlign: "left" }}>Grande</td>
           <td style={{ padding: "8px 24px", textAlign: "left" }}>16 fl oz</td>
-          <td style={{ padding: "8px 24px", textAlign: "left" }}>$5.45</td>
+          <td style={{ padding: "8px 24px", textAlign: "left" }}>$6.45</td>
         </tr>
         <tr>
-          <td style={{ padding: "8px 24px", textAlign: "left" }}>Venti</td>
+          <td style={{ padding: "8px 20px", textAlign: "left" }}>Venti</td>
           <td style={{ padding: "8px 24px", textAlign: "left" }}>20 fl oz</td>
-          <td style={{ padding: "8px 24px", textAlign: "left" }}>$5.75</td>
+          <td style={{ padding: "8px 24px", textAlign: "left" }}>$6.85</td>
         </tr>
       </tbody>
     </table>
@@ -171,3 +153,5 @@ Try it out! It might become your new favorite!
   {  /* <div>Ad Will Show Here</div> */}
   <div></div>
 </div>
+
+
