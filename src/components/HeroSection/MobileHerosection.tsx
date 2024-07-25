@@ -54,7 +54,7 @@ const MobileHerosection = () => {
 
     fetchProducts();
   }, []); // Empty dependency array means this will only run once when the component mounts
-  const categorylink = convertNameToLink(selectedCategory.name);
+  const categoryLink = convertNameToLink(selectedCategory.name);
 
   return (
     <>
@@ -84,10 +84,9 @@ const MobileHerosection = () => {
                     // priority // Add this to prioritize image loading
                     loading="lazy"
                   />
-
                   <span className="font-bold text-xl">{product.name}</span>
                   <Link
-                    href={`${categorylink}/${link}`}
+                    href={`/${categoryLink}/${link}`}
                     className="w-fit px-6 text-white rounded-full bg-primary py-2 text-[15px] duration-500 transition-all"
                   >
                     View Price & Calories

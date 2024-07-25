@@ -176,7 +176,7 @@ const HeroSection = () => {
         <div className="flex relative overflow-hidden bg-white  w-full  justify-between pl-[94px] py-[40px]">
           <div className="text-center z-50 flex flex-col items-center justify-center gap-3">
             <div className="ml-0 md:mt-0 mt-5 md:ml-6">
-              <Link href={`/${link}`}>
+              <Link href={`/${categoryLink}/${link}`}>
                 <Image
                   className="rounded-full max-w-[200px] md:max-w-[280px] shadow-glow shadow-primary"
                   src={selectedProduct.image}
